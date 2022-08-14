@@ -2,7 +2,7 @@
 
 # Expenese Tracker
 
-> This app is for tracking your expenese on daily life. user can input name of item, amout of the item and date of the item, they can track by filter by year. other feature of the app is it give you monthly chart Bar of your expenese. If you like it do not forget to give me star.
+> This app is for tracking your expenese on daily life. user can input name of item, amount of the item and date of the expenese, they can track by filter by year. other feature of the app is it give you monthly chart Bar of your expenese. If you like it do not forget to give me star.
 
 ## Built With
 
@@ -18,7 +18,7 @@
 
 step 1: Clone this repo locally using git in the command line and the following command
 
-git clone https://github.com/aron-helu/Math-Magicians-application.git
+git clone (https://github.com/aron-helu/Expenese-Tracker.git)
 
 Step 2: run npm install to download the necessary modules.
 
