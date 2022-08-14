@@ -1,9 +1,12 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+i![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Expense Tracker
 
 > This app is for tracking your expense on daily life. user can input name of item, amount of the item and date of the expense, they can track by filter by year. other feature of the app is it give you monthly chart Bar of your expenese. If you like it do not forget to give me star.
 
+## ScreenShot
+
+<img src="./expense.png" width="400px" ></img>
 ## Built With
 
 - HTML & Css
