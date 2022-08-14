@@ -1,4 +1,4 @@
-i![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Expense Tracker
 
@@ -11,7 +11,6 @@ i![](https://img.shields.io/badge/Microverse-blueviolet)
 
 - HTML & Css
 - React
-- 
 
 ## Live Demo (if available)
  [on progress...]
