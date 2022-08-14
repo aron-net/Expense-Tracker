@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Expenese Tracker
+# Expense Tracker
 
-> This app is for tracking your expenese on daily life. user can input name of item, amount of the item and date of the expenese, they can track by filter by year. other feature of the app is it give you monthly chart Bar of your expenese. If you like it do not forget to give me star.
+> This app is for tracking your expense on daily life. user can input name of item, amount of the item and date of the expense, they can track by filter by year. other feature of the app is it give you monthly chart Bar of your expenese. If you like it do not forget to give me star.
 
 ## Built With
 
