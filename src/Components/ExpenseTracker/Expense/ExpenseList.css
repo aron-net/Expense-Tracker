@@ -1,8 +1,8 @@
 .expense-list {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem auto;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
 }
