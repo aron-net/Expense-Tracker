@@ -1,6 +1,7 @@
 import ExpenseList from "./ExpenseList";
 import Card from "../../UI/Card";
 import './Expense.css';
+import NewExpense from "../NewExpense/NewExpense";
 const Expense = () => {
     const expenses = [
         {id: 'e1', title: 'Toilet Paper', amount: 94.12, date: new Date(2020, 7, 14)},
@@ -11,6 +12,7 @@ const Expense = () => {
 
     return (
         <Card className="expense">
+            <NewExpense />
             <ExpenseList data={expenses}/>
         </Card>
     )
