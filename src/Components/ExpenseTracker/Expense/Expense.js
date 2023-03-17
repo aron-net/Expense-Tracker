@@ -10,9 +10,16 @@ const Expense = () => {
         {id: 'e4', title: 'New Desk (Wooden)', amount: 450, date: new Date(2021, 5, 12)},
     ];
 
+    const addNewExpense = (enteredNewExpense) => {
+        const newExpense = {
+            ...enteredNewExpense,
+        }
+        console.log(newExpense);
+    }
+
     return (
         <Card className="expense">
-            <NewExpense />
+            <NewExpense onAddNewExpense={addNewExpense}/>
             <ExpenseList data={expenses}/>
         </Card>
     )
