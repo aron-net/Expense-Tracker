@@ -1,0 +1,15 @@
+.expense-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4d4d4d;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.expense-item__description {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+}
