@@ -1,35 +1,42 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './ExpenseForm.css';
 
-const ExpenseForm = (props) => {
-  const [enteredTitle, setEnterdTitle] = useState('');
+const ExpenseForm = ({ onSaveNewExpense }) => {
+  const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
+
   const titleChangeHandler = (event) => {
-    setEnterdTitle(event.target.value);
+    setEnteredTitle(event.target.value);
   };
+
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
   };
+
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
   };
+
   const submitHandler = (event) => {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: new Date(enteredDate),
     };
-    props.onSaveNewExpense(expenseData);
-    setEnterdTitle('');
+    onSaveNewExpense(expenseData);
+    setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
   };
+
   return (
     <form onSubmit={submitHandler}>
       <div className="expense-form">
         <div className="expense-form__control">
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label>Title:</label>
           <input
             type="text"
@@ -39,6 +46,7 @@ const ExpenseForm = (props) => {
           />
         </div>
         <div className="expense-form__control">
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label>Amount:</label>
           <input
             type="number"
@@ -50,6 +58,7 @@ const ExpenseForm = (props) => {
           />
         </div>
         <div className="expense-form__control">
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label>Date:</label>
           <input
             type="date"
@@ -65,6 +74,10 @@ const ExpenseForm = (props) => {
       </div>
     </form>
   );
+};
+
+ExpenseForm.propTypes = {
+  onSaveNewExpense: PropTypes.func.isRequired,
 };
 
 export default ExpenseForm;

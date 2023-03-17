@@ -7,13 +7,13 @@
 }
 
 .expense-form__control label {
-    font-weight: bold;
+  font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
 }
 
 .expense-form__control input {
-    font: inherit;
+  font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -22,5 +22,5 @@
 }
 
 .expense-form__action {
-    text-align: right;
+  text-align: right;
 }
