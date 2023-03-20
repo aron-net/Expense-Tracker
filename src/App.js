@@ -1,12 +1,9 @@
-import Expense from "./Components/ExpenseTracker/Expense/Expense";
+import Expense from './Components/ExpenseTracker/Expense/Expense';
 
-const App = () => {
-  
-  return (
-    <div className="App">
-      <Expense />
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <Expense />
+  </div>
+);
 
 export default App;
