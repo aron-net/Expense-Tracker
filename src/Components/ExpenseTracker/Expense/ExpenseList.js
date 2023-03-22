@@ -3,18 +3,19 @@ import ExpenseItem from './ExpenseItem';
 import './ExpenseList.css';
 
 const ExpenseList = ({ item }) => {
-   if (item.length === 0) {
-   return <h2>No Expense Item Found</h2>
-   }
- return (
-  <ul className='expense__content__list'>
-    {item.map(({
-      id, title, amount, date,
-    }) => (
-      <ExpenseItem key={id} title={title} amount={amount} date={date} />
-    ))}
-  </ul>
-)};
+  if (item.length === 0) {
+    return <h2>No Expense Item Found</h2>;
+  }
+  return (
+    <ul className="expense__content__list">
+      {item.map(({
+        id, title, amount, date,
+      }) => (
+        <ExpenseItem key={id} title={title} amount={amount} date={date} />
+      ))}
+    </ul>
+  );
+};
 
 ExpenseList.propTypes = {
   item: PropTypes.arrayOf(

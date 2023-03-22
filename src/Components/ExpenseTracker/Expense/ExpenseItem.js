@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import ExpenseDate from "./ExpenseDate";
-import Card from "../../UI/Card";
-import "./ExpenseItem.css";
+import PropTypes from 'prop-types';
+import ExpenseDate from './ExpenseDate';
+import Card from '../../UI/Card';
+import './ExpenseItem.css';
 
 const ExpenseItem = ({ date, title, amount }) => (
   <li>
@@ -9,7 +9,10 @@ const ExpenseItem = ({ date, title, amount }) => (
       <ExpenseDate date={date} />
       <div className="expense-item__description">
         <h2>{title}</h2>
-        <div className="expense-item__amount">${amount}</div>
+        <div className="expense-item__amount">
+          $
+          {amount}
+        </div>
       </div>
     </Card>
   </li>
