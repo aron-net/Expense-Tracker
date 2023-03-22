@@ -20,7 +20,8 @@ const ExpenseList = ({ data }) => {
       id, title, amount, date,
     }) => (
       <ExpenseItem key={id} title={title} amount={amount} date={date} />
-    ))};
+    ));
+  }
   return (
     <Card className="expense-list">
       <FilterExpense
