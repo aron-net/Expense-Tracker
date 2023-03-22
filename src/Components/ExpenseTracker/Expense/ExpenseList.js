@@ -10,9 +10,9 @@ const ExpenseList = ({ data }) => {
   const addFilterChangeHandler = (selectYear) => {
     setFilterYear(selectYear);
   };
-  const filterExpense = data.filter( expense => {
-    return expense.date.getFullYear().toString() === filterYear
-  })
+  const filterExpense = data.filter(
+    (expense) => expense.date.getFullYear().toString() === filterYear,
+  );
   return (
     <Card className="expense-list">
       <FilterExpense
