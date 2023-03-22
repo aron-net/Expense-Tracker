@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import ExpenseList from './ExpenseList';
+import ExpenseContainer from './ExpenseContainer';
+import NewExpense from '../NewExpense/NewExpense';
 import Card from '../../UI/Card';
 import './Expense.css';
-import NewExpense from '../NewExpense/NewExpense';
 
 const dummyExpense = [
   {
@@ -29,7 +29,7 @@ const Expense = () => {
   return (
     <Card className="expense">
       <NewExpense onAddNewExpense={addNewExpense} />
-      <ExpenseList data={expenses} />
+      <ExpenseContainer data={expenses} />
     </Card>
   );
 };

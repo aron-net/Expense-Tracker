@@ -1,57 +1,23 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import ExpenseItem from './ExpenseItem';
-import Card from '../../UI/Card';
 import './ExpenseList.css';
-import FilterExpense from '../FilterExpense/FilterExpense';
 
-const ExpenseList = ({ data }) => {
-  const [filterYear, setFilterYear] = useState('2023');
-  const addFilterChangeHandler = (selectYear) => {
-    setFilterYear(selectYear);
-  };
-  const filterExpense = data.filter(
-    (expense) => expense.date.getFullYear().toString() === filterYear,
-  );
-
-  let expenseContainer = <p>No Expense Item</p>;
-  if (filterExpense.length > 0) {
-    expenseContainer = filterExpense.map(({
+const ExpenseList = ({ item }) => {
+   if (item.length === 0) {
+   return <h2>No Expense Item Found</h2>
+   }
+ return (
+  <ul className='expense__content__list'>
+    {item.map(({
       id, title, amount, date,
     }) => (
       <ExpenseItem key={id} title={title} amount={amount} date={date} />
-    ));
-  }
-  return (
-    <Card className="expense-list">
-      <FilterExpense
-        selected={filterYear}
-        onChangeFilter={addFilterChangeHandler}
-      />
-      {/* option one for if conditions  */}
-      {/* {filterExpense.length === 0 && <p>No Expense Item</p>}
-      {filterExpense.length > 0 && filterExpense.map(({
-        id, title, amount, date,
-      }) => (
-        <ExpenseItem key={id} title={title} amount={amount} date={date} />
-      ))} */}
-      {/* Second option for is condtion */}
-      {/* {filterExpense.length === 0 ? (
-        <p>No Expense</p>
-        ) : (
-        filterExpense.map(({
-          id, title, amount, date,
-        }) => (
-          <ExpenseItem key={id} title={title} amount={amount} date={date} />
-        ))
-      )} */}
-      {expenseContainer}
-    </Card>
-  );
-};
+    ))}
+  </ul>
+)};
 
 ExpenseList.propTypes = {
-  data: PropTypes.arrayOf(
+  item: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
@@ -60,5 +26,4 @@ ExpenseList.propTypes = {
     }),
   ).isRequired,
 };
-
 export default ExpenseList;
