@@ -3,7 +3,7 @@ import ChartBar from './ChartBar';
 import './Chart.css';
 
 const Chart = ({ chartExpense }) => (
-  <div>
+  <div className="chart">
     {chartExpense.map((chartData) => (
       <ChartBar
         key={chartData.label}

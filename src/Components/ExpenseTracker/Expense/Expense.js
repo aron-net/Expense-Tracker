@@ -3,6 +3,7 @@ import ExpenseContainer from './ExpenseContainer';
 import NewExpense from '../NewExpense/NewExpense';
 import Card from '../../UI/Card';
 import './Expense.css';
+import Chart from '../Chart/Chart';
 
 const dummyExpense = [
   {
@@ -29,6 +30,7 @@ const Expense = () => {
   return (
     <Card className="expense">
       <NewExpense onAddNewExpense={addNewExpense} />
+      <Chart />
       <ExpenseContainer data={expenses} />
     </Card>
   );
