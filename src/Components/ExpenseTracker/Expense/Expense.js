@@ -22,8 +22,8 @@ const dummyExpense = [
 const Expense = () => {
   const [expenses, setExpense] = useState(dummyExpense);
 
-  const addNewExpense = enteredNewExpense => {
-    setExpense(prevExpense => [enteredNewExpense, ...prevExpense]);
+  const addNewExpense = (enteredNewExpense) => {
+    setExpense((prevExpense) => [enteredNewExpense, ...prevExpense]);
   };
 
   return (
