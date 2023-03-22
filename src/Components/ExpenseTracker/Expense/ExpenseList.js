@@ -6,17 +6,20 @@ import './ExpenseList.css';
 import FilterExpense from '../FilterExpense/FilterExpense';
 
 const ExpenseList = ({ data }) => {
-  const [filterExpense, setFilterExpense] = useState('2023');
+  const [filterYear, setFilterYear] = useState('2023');
   const addFilterChangeHandler = (selectYear) => {
-    setFilterExpense(selectYear);
+    setFilterYear(selectYear);
   };
+  const filterExpense = data.filter( expense => {
+    return expense.date.getFullYear().toString() === filterYear
+  })
   return (
     <Card className="expense-list">
       <FilterExpense
-        selected={filterExpense}
+        selected={filterYear}
         onChangeFilter={addFilterChangeHandler}
       />
-      {data.map(({
+      {filterExpense.map(({
         id, title, amount, date,
       }) => (
         <ExpenseItem key={id} title={title} amount={amount} date={date} />
