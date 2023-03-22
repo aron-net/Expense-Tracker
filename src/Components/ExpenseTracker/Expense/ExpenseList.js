@@ -1,32 +1,24 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
 import ExpenseItem from './ExpenseItem';
-import Card from '../../UI/Card';
 import './ExpenseList.css';
-import FilterExpense from '../FilterExpense/FilterExpense';
 
-const ExpenseList = ({ data }) => {
-  const [filterExpense, setFilterExpense] = useState('2023');
-  const addFilterChangeHandler = (selectYear) => {
-    setFilterExpense(selectYear);
-  };
+const ExpenseList = ({ item }) => {
+  if (item.length === 0) {
+    return <h2>No Expense Item Found</h2>;
+  }
   return (
-    <Card className="expense-list">
-      <FilterExpense
-        selected={filterExpense}
-        onChangeFilter={addFilterChangeHandler}
-      />
-      {data.map(({
+    <ul className="expense__content__list">
+      {item.map(({
         id, title, amount, date,
       }) => (
         <ExpenseItem key={id} title={title} amount={amount} date={date} />
       ))}
-    </Card>
+    </ul>
   );
 };
 
 ExpenseList.propTypes = {
-  data: PropTypes.arrayOf(
+  item: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
@@ -35,5 +27,4 @@ ExpenseList.propTypes = {
     }),
   ).isRequired,
 };
-
 export default ExpenseList;

@@ -1,8 +1,5 @@
-.expense-list {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  align-items: center;
-  padding: 1rem;
+.expense__content__list {
+  list-style: none;
+  padding: 0%;
   width: 100%;
 }
