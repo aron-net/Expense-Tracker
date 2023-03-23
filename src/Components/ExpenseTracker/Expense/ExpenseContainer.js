@@ -4,6 +4,7 @@ import ExpenseList from './ExpenseList';
 import Card from '../../UI/Card';
 import FilterExpense from '../FilterExpense/FilterExpense';
 import './Expensecontainer.css';
+import ExpenseChart from './ExpenseChart';
 
 const ExpenseContainer = ({ data }) => {
   const [filterYear, setFilterYear] = useState('2023');
@@ -46,6 +47,7 @@ const ExpenseContainer = ({ data }) => {
         ))
       )} */}
       {/* {expenseContainer} */}
+      <ExpenseChart expenses={filterExpense} />
       <ExpenseList item={filterExpense} />
     </Card>
   );
