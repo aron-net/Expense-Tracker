@@ -1,6 +1,9 @@
+import CourseGoalForm from "./CourseGoalForm";
+import './CourseGoal.css';
+
 const CouresGoal = () => (
-  <div>
-    <h1>Aron</h1>
+  <div className="course-goal__card">
+    <CourseGoalForm />
   </div>
 );
 

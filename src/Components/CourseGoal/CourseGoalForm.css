@@ -1,0 +1,35 @@
+.course-goal-form__container {
+    background-color: antiquewhite;
+    width: 30%;
+    margin: auto;
+}
+
+.course-goal__form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-items: flex-start;
+}
+
+.course-goal__label {
+    margin: 4px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.course-goal__input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 8px;
+    font-size: 20px;
+    width: 90%;
+    border-radius: 12px;
+}
+
+.course-goal__button {
+    width: 20%;
+    background-color: brown;
+    padding: 1rem;
+    color: whitesmoke;
+    border-radius: 15px;
+}
