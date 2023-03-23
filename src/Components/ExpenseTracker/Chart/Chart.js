@@ -2,21 +2,26 @@ import PropTypes from 'prop-types';
 import ChartBar from './ChartBar';
 import './Chart.css';
 
-const Chart = ({ chartExpense }) => (
-  <div className="chart">
-    {chartExpense.map((chartData) => (
-      <ChartBar
-        key={chartData.label}
-        value={chartData.value}
-        maxValue={null}
-        label={chartData.label}
-      />
-    ))}
-  </div>
-);
+const Chart = ({ dataPoints }) => {
+  const dataPointValues = dataPoints.map((dataPoint) => dataPoint.value);
+  const totalMaximum = Math.max(...dataPointValues);
+
+  return (
+    <div className="chart">
+      {dataPoints.map((dataPoint) => (
+        <ChartBar
+          key={dataPoint.label}
+          value={dataPoint.value}
+          maxValue={totalMaximum}
+          label={dataPoint.label}
+        />
+      ))}
+    </div>
+  );
+};
 
 Chart.propTypes = {
-  chartExpense: PropTypes.arrayOf(
+  dataPoints: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       value: PropTypes.number.isRequired,
