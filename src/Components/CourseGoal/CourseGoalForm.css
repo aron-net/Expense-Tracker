@@ -1,47 +1,46 @@
 .course-goal-form__container {
-    background-color: antiquewhite;
-    width: 90%;
-    margin: auto;
+  background-color: antiquewhite;
+  width: 90%;
+  margin: auto;
 }
 
 .course-goal__form {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    justify-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-items: flex-start;
 }
 
 .course-goal__label {
-    margin: 4px;
-    font-size: 20px;
-    font-weight: 600;
+  margin: 4px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .course-goal__input {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 8px;
-    font-size: 20px;
-    width: 90%;
-    border-radius: 12px;
-    border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 8px;
+  font-size: 20px;
+  width: 90%;
+  border-radius: 12px;
+  border: none;
 }
 
 .course-goal__button {
-    width: 50%;
-    background-color: brown;
-    padding: 1rem;
-    color: whitesmoke;
-    border-radius: 15px;
+  width: 50%;
+  background-color: brown;
+  padding: 1rem;
+  color: whitesmoke;
+  border-radius: 15px;
 }
 
-
 @media screen and (min-width: 768px) {
-    .course-goal-form__container {
-        width: 30%;
-    }
+  .course-goal-form__container {
+    width: 30%;
+  }
 
-    .course-goal__button {
-        width: 30%;
-    }
+  .course-goal__button {
+    width: 30%;
+  }
 }
