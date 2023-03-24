@@ -7,7 +7,7 @@ const CourseGoalForm = ({ onAddGoal }) => {
   const [isValid, setIsValid] = useState(true);
 
   const goalInputHandler = (event) => {
-    if(event.target.value.trim().length > 0) {
+    if (event.target.value.trim().length > 0) {
       setIsValid(true);
     }
     setEnteredCourse(event.target.value);
@@ -16,7 +16,7 @@ const CourseGoalForm = ({ onAddGoal }) => {
   const formSubmitHandler = (event) => {
     event.preventDefault();
     if (enteredCourse.trim().length === 0) {
-      setIsValid(false)
+      setIsValid(false);
       return;
     }
     onAddGoal(enteredCourse);
@@ -27,7 +27,7 @@ const CourseGoalForm = ({ onAddGoal }) => {
     <div className="course-goal-form__container">
       <form onSubmit={formSubmitHandler} className="course-goal__form">
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label htmlFor="course-goal" className="course-goal__label" style={{color: !isValid ? 'red' : 'black' }}>
+        <label htmlFor="course-goal" className="course-goal__label" style={{ color: !isValid ? 'red' : 'black' }}>
           Course Goal
         </label>
         <input
@@ -36,7 +36,7 @@ const CourseGoalForm = ({ onAddGoal }) => {
           type="text"
           onChange={goalInputHandler}
           value={enteredCourse}
-          style={{backgroundColor: !isValid ? 'salmon' : 'white'}}
+          style={{ backgroundColor: !isValid ? 'salmon' : 'white' }}
         />
         <button className="course-goal__button" type="submit">
           Add Goal
