@@ -1,6 +1,6 @@
 .course-goal-form__container {
     background-color: antiquewhite;
-    width: 30%;
+    width: 90%;
     margin: auto;
 }
 
@@ -24,12 +24,24 @@
     font-size: 20px;
     width: 90%;
     border-radius: 12px;
+    border: none;
 }
 
 .course-goal__button {
-    width: 20%;
+    width: 50%;
     background-color: brown;
     padding: 1rem;
     color: whitesmoke;
     border-radius: 15px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .course-goal-form__container {
+        width: 30%;
+    }
+
+    .course-goal__button {
+        width: 30%;
+    }
 }
