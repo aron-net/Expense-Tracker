@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './GoalItem.css';
 
 const GoalItem = ({ id, onDelete, children }) => {
   const deleteHandler = () => {
